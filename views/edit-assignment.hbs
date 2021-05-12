@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Assignment</title>
+  </head>
+  <body>
+    <h1>Edit an Assignment</h1>
+
+    <form action="/{{assignment.id}}/edit-submit" method="POST">
+      <p>
+        <label for="assignment">Assignment Name</label>
+        <input type="text" value="{{assignment.name}}" name="assignment" id="assignment" />
+      </p>
+      <p>
+        <label for="score">Score</label>
+        <input type="number" value="{{assignment.score}}" name="score" id="score" />
+      </p>
+      <p>
+        <label for="total">Total</label>
+        <input type="number" value="{{assignment.total}}" name="total" id="total" />
+      </p>
+      <p>
+        <input type="checkbox" value="{{assignment.completed}}" name="complete" id="completed" />
+        <label for="completed">Have you completed this assignment?</label>
+      </p>
+      <p>
+        <button type="submit">Submit</button>
+      </p>
+    </form>
+    <a href="/">Back to Assignments</a>
+  </body>
+</html>
